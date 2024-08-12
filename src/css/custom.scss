@@ -1,0 +1,50 @@
+html, body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  font-family: $font-family-default;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  background-color: $gray-100;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.25s ease;
+  &:hover {
+
+  }
+}
+
+#q-app {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.main .container {
+  flex: 1;
+}
+
+.no-results {
+  font-size: .85rem;
+  font-weight: 400;
+  margin: 20px 0px;
+  display: block;
+  border-radius: $border-radius-sm;
+  border: 1px solid $brown-400;
+  overflow: hidden;
+  padding: 5px 15px;
+  color: $brown-400;
+}

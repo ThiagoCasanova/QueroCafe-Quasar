@@ -1,0 +1,48 @@
+.readmore {
+  &__state {
+    display: none;
+  }
+
+  &__summary {
+    &:after {
+      content: "...";
+    }
+  }
+
+  &__wrap {
+    display: inline;
+  }
+
+  &__target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .1s linear;
+  }
+
+  &__wrap &__state:checked ~  &__target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: initial;
+  }
+
+  &__state ~ &__trigger:before {
+    content: 'Ler mais';
+  }
+
+  &__state:checked ~ &__trigger:before {
+    content: 'Ler menos';
+  }
+
+  &__state:checked ~ &__summary {
+    &:after {
+      display: none;
+    }
+  }
+
+  &__trigger {
+    display: inline;
+    color: $brown-400;
+    margin-left: 5px;
+  }
+}
